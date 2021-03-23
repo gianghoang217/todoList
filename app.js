@@ -89,11 +89,6 @@ app.get("/:customListName", function(req, res) {
   });
 });
 
-// app.post("/work", function(req, res) {
-//   let item = req.body.newItem;
-//   workItems.push(item);
-//   res.redirect("/work");
-// });
 
 app.post("/", function(req, res) {
   const itemName = req.body.newItem;
@@ -114,13 +109,6 @@ app.post("/", function(req, res) {
     res.redirect("/" + listName);
   }
 
-  // if (req.body.list === "Work") {
-  //   workItems.push(item);
-  //   res.redirect("/work");
-  // } else {
-  //   items.push(item);
-  //   res.redirect("/");
-  // }
 });
 
 app.post("/delete", function(req, res) {
